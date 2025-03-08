@@ -13,8 +13,8 @@ permalink: /
 
 <br />
 
-- :octocat: [parkjiye's Github](https://github.com/parkjiye)
-- :email: parkji3618@gmail.com
+- 😼 [parkjiye's Github](https://github.com/parkjiye)
+- 💌 parkji3618@gmail.com
 
 <br />
 
