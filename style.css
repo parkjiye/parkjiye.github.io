@@ -3,7 +3,7 @@
   --bg-alt: #f5f5f7;
   --text: #1d1d1f;
   --text-secondary: #6e6e73;
-  --accent: #0071e3;
+  --accent: #1a5276;
   --border: rgba(0, 0, 0, 0.08);
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -16,7 +16,7 @@
     --bg-alt: #1d1d1f;
     --text: #f5f5f7;
     --text-secondary: #a1a1a6;
-    --accent: #2997ff;
+    --accent: #4a90c7;
     --border: rgba(255, 255, 255, 0.1);
     --shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
     --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.45);
@@ -45,76 +45,111 @@ body {
 }
 
 .container {
-  max-width: 840px;
+  max-width: 920px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 40px;
 }
 
 /* Hero */
 .hero {
-  padding: 140px 0 100px;
-  text-align: center;
+  padding: 56px 0 32px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.avatar {
+  position: relative;
+  flex-shrink: 0;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--bg-alt);
+  box-shadow: var(--shadow);
+}
+
+.avatar::before {
+  content: attr(data-initials);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: -0.02em;
+}
+
+.avatar img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .eyebrow {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--accent);
   letter-spacing: 0.02em;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .hero h1 {
-  font-size: clamp(40px, 6vw, 64px);
+  font-size: clamp(28px, 5vw, 36px);
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .role {
-  font-size: 22px;
+  font-size: 17px;
   color: var(--text-secondary);
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .tagline {
-  font-size: 17px;
+  font-size: 15px;
   color: var(--text-secondary);
-  margin-bottom: 36px;
+  margin-bottom: 14px;
 }
 
 .contact-links {
   display: flex;
-  justify-content: center;
-  gap: 12px;
+  justify-content: flex-start;
+  gap: 14px;
   list-style: none;
   flex-wrap: wrap;
 }
 
 .contact-links a {
-  display: inline-block;
-  padding: 10px 22px;
-  border-radius: 980px;
-  background: var(--bg-alt);
-  color: var(--text);
+  color: var(--accent);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
-  border: 1px solid var(--border);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .contact-links a:hover {
-  background: var(--accent);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
+  opacity: 0.6;
 }
 
 /* Sections */
 .section {
-  padding: 90px 0;
+  padding: 48px 0;
 }
 
 .section.alt {
@@ -122,17 +157,17 @@ body {
 }
 
 .section-title {
-  font-size: 34px;
+  font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.015em;
-  margin-bottom: 44px;
-  text-align: center;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .section-body p {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--text-secondary);
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .section-body p:last-child {
@@ -141,21 +176,7 @@ body {
 
 /* Experience */
 .exp-item {
-  background: var(--bg);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 36px 40px;
-  margin-bottom: 24px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.section.alt .exp-item {
-  background: var(--bg);
-}
-
-.exp-item:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
+  margin-bottom: 28px;
 }
 
 .exp-item:last-child {
@@ -167,18 +188,31 @@ body {
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 18px;
+  gap: 4px 12px;
+  margin-bottom: 8px;
 }
 
 .exp-header h3 {
-  font-size: 21px;
-  font-weight: 600;
-  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.exp-url {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 10px;
+  word-break: break-all;
+}
+
+.exp-url:hover {
+  text-decoration: underline;
 }
 
 .exp-role {
   font-size: 15px;
+  font-weight: 400;
   color: var(--text-secondary);
 }
 
@@ -194,10 +228,10 @@ body {
 
 .exp-list li {
   position: relative;
-  padding-left: 20px;
-  font-size: 16px;
+  padding-left: 16px;
+  font-size: 15px;
   color: var(--text-secondary);
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .exp-list li:last-child {
@@ -205,19 +239,33 @@ body {
 }
 
 .exp-list li::before {
-  content: "";
+  content: "•";
   position: absolute;
   left: 0;
-  top: 10px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--accent);
+  color: var(--text-secondary);
+}
+
+/* Competencies */
+.comp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comp-item h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.comp-item p {
+  font-size: 15px;
+  color: var(--text-secondary);
 }
 
 /* Skills */
 .skill-group {
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
 
 .skill-group:last-child {
@@ -225,9 +273,9 @@ body {
 }
 
 .skill-group h3 {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   color: var(--text-secondary);
 }
 
@@ -255,7 +303,7 @@ body {
 
 /* Education */
 .edu-group {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .edu-group:last-child {
@@ -263,9 +311,9 @@ body {
 }
 
 .edu-group h3 {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
   color: var(--text-secondary);
 }
 
@@ -278,12 +326,18 @@ body {
   background: var(--bg);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 22px 32px;
+  padding: 14px 24px;
 }
 
 .edu-name {
   font-size: 16px;
   font-weight: 500;
+}
+
+.edu-gpa {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 4px;
 }
 
 .edu-period {
@@ -294,7 +348,7 @@ body {
 
 /* Footer */
 .footer {
-  padding: 48px 0 80px;
+  padding: 28px 0 48px;
   text-align: center;
 }
 
@@ -323,19 +377,29 @@ body {
 }
 
 @media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+
   .hero {
-    padding: 100px 0 70px;
+    padding: 56px 0 36px;
+  }
+
+  .hero-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
 
   .section {
-    padding: 64px 0;
+    padding: 36px 0;
   }
 
   .exp-item {
-    padding: 28px 24px;
+    padding: 20px 20px;
   }
 
   .edu-item {
-    padding: 20px 24px;
+    padding: 14px 20px;
   }
 }
