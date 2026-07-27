@@ -357,6 +357,175 @@ body {
   color: var(--text-secondary);
 }
 
+/* Career document (경력기술서) */
+.career-nav {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.career-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.career-back {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.career-back:hover {
+  color: var(--accent);
+}
+
+.career-nav-title {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.career-doc {
+  padding: 56px 0 96px;
+}
+
+.career-doc h1 {
+  font-size: clamp(28px, 5vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.career-intro {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+
+.career-company {
+  margin-bottom: 48px;
+}
+
+.career-company:last-child {
+  margin-bottom: 0;
+}
+
+.career-company-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-bottom: 20px;
+}
+
+.career-company-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.career-team {
+  margin-bottom: 8px;
+}
+
+.career-team h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.career-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.career-desc a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.career-project {
+  margin: 28px 0;
+}
+
+.career-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 4px 32px;
+  margin-bottom: 8px;
+}
+
+.career-row-meta h3,
+.career-row-meta h4 {
+  margin-bottom: 4px;
+}
+
+.career-row-meta h4 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.career-period {
+  font-size: 13px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.career-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 12px 0 6px;
+}
+
+.career-list {
+  list-style: none;
+}
+
+.career-list li {
+  position: relative;
+  padding-left: 1.5em;
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.career-list li:last-child {
+  margin-bottom: 0;
+}
+
+.career-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--text-secondary);
+}
+
+.career-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.career-tech li {
+  padding-left: 0;
+}
+
+.career-tech li::before {
+  content: none;
+}
+
+.career-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 48px 0;
+}
+
 /* Reveal animation */
 .section,
 .hero {
@@ -401,5 +570,10 @@ body {
 
   .edu-item {
     padding: 14px 20px;
+  }
+
+  .career-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 }

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박지예 | 경력기술서</title>
+    <meta name="description" content="박지예 - 경력기술서" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="career-nav">
+      <div class="container career-nav-row">
+        <a href="index.html" class="career-back">← 박지예</a>
+        <span class="career-nav-title">경력기술서</span>
+      </div>
+    </header>
+
+    <main class="career-doc">
+      <div class="container">
+        <h1>경력기술서</h1>
+        <p class="career-intro">
+          연간방문객 600만 명 규모의 예매·결제 도메인에서 고객서비스 시스템을
+          개발·운영하는 3년차 백엔드 개발자입니다. 프로젝트 단위로 담당 업무와
+          성과를 정리했습니다.
+        </p>
+
+        <!--
+          아래 항목 구성은 index.html의 Experience/Competencies 내용을
+          경력기술서 형식(회사 > 팀 > 프로젝트)으로 재구성한 것입니다.
+          실제 프로젝트 구분·기간·사용 기술이 맞는지 확인 후 수정하세요.
+        -->
+
+        <section class="career-company">
+          <div class="career-company-header">
+            <h2>롯데이노베이트</h2>
+            <p class="career-period">2023.05 — 현재</p>
+          </div>
+
+          <div class="career-team">
+            <div class="career-row">
+              <div class="career-row-meta">
+                <h3>월드IS팀 · 고객서비스</h3>
+              </div>
+              <div class="career-row-content">
+                <p class="career-desc">
+                  롯데월드 및 계열 사업장의 티켓 예매·결제·연간회원 서비스를
+                  개발·운영하는 팀. <br />
+                  연간 방문객 600만 명 규모의 예매 시스템(<a
+                    href="https://advticket.lotteworld.com"
+                    target="_blank"
+                    rel="noopener"
+                    >advticket.lotteworld.com</a
+                  >)을 담당.
+                </p>
+              </div>
+            </div>
+
+            <div class="career-project">
+              <div class="career-row">
+                <div class="career-row-meta">
+                  <h4>결제 시스템 개선 및 안정화</h4>
+                  <p class="career-period">2025.09 — 2026.05</p>
+                </div>
+                <div class="career-row-content">
+                  <p class="career-desc">1) 통신사 할인/승인 프로세스 고도화</p>
+                  <p class="career-label">역할</p>
+                  <ul class="career-list">
+                    <li>결제·취소 도메인 메인 개발자</li>
+                  </ul>
+                  <p class="career-label">업무</p>
+                  <ul class="career-list">
+                    <li>
+                      기존 통신사 할인 + 주결제 승인 프로세스 불안정(브라우저의
+                      localStorage에 저장 및 통신사 승인과 주결제 승인 프로세스
+                      분리)
+                    </li>
+                    <li>
+                      통신사 할인 정보를 Redis에 저장 -> 저장된 정보를 바탕으로
+                      통신사 승인 시 사용
+                    </li>
+                    <li>통신사 승인과 주결제 승인 프로세스 통합</li>
+                  </ul>
+                  <br />
+                  <p class="career-desc">
+                    2) 결제/취소 오류 등 간헐적 엣지 케이스 원인 규명 및 개선
+                  </p>
+                  <ul class="career-list">
+                    <li>
+                      결제 오류 건수 월 100건 이상 → 10건 미만으로 90% 이상 감축
+                    </li>
+                    <li>
+                      통신사 가승인, 결제·취소 오류 등 간헐적 엣지 케이스 원인
+                      규명 및 개선
+                    </li>
+                    <li>결제 수단 확장 프로젝트 리드</li>
+                  </ul>
+                  <p class="career-label">사용 기술</p>
+                  <ul class="career-list career-tech">
+                    <li>Java</li>
+                    <li>Spring Boot</li>
+                    <li>Redis</li>
+                    <li>React</li>
+                    <li>MSSQL</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="career-project">
+              <div class="career-row">
+                <div class="career-row-meta">
+                  <h4>월드 차세대 전환 프로젝트</h4>
+                  <p class="career-period">2024 — 2025.12</p>
+                </div>
+                <div class="career-row-content">
+                  <p class="career-desc">
+                    레거시 Spring/JSP 시스템을 차세대 아키텍처로 전환하는
+                    프로젝트에서 고객서비스 파트 담당.
+                  </p>
+                  <p class="career-label">역할</p>
+                  <ul class="career-list">
+                    <li>고객서비스 파트 담당 개발자</li>
+                  </ul>
+                  <p class="career-label">업무</p>
+                  <ul class="career-list">
+                    <li>
+                      연간회원·강습·결제 시스템 메인 개발자로 개발 및 운영
+                    </li>
+                    <li>통합 웹티켓 프로세스 설계 및 개발</li>
+                    <li>웹티켓/지류티켓 등록 서비스 개발</li>
+                    <li>
+                      카카오 톡학생증 API 연동 설계·개발, 이후
+                      톡사원증·틴카드·감면카드까지 확장 가능하도록 모듈화
+                    </li>
+                  </ul>
+                  <p class="career-label">사용 기술</p>
+                  <ul class="career-list career-tech">
+                    <li>Java</li>
+                    <li>Spring Boot</li>
+                    <li>JPA</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>MSSQL</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="career-project">
+              <div class="career-row">
+                <div class="career-row-meta">
+                  <h4>신규 서비스 및 인프라 운영</h4>
+                  <p class="career-period">2023.05 — 현재</p>
+                </div>
+                <div class="career-row-content">
+                  <p class="career-label">업무</p>
+                  <ul class="career-list">
+                    <li>
+                      Spring Scheduler 기반 앱푸시 자동 발송 프로세스 구축 (배치
+                      발송 + 행동 기반 발송 구조 설계)
+                    </li>
+                    <li>
+                      통신사 할인 인증/승인 프로세스 고도화 (레거시 리팩토링)
+                    </li>
+                    <li>레거시 소셜 로그인 시스템 API 업그레이드 및 고도화</li>
+                    <li>OpenShift 기반 배포 환경에서 서비스 운영</li>
+                    <li>
+                      다양한 파트너사·조직과 협업하며 프로젝트 리딩, 요구사항
+                      조율
+                    </li>
+                  </ul>
+                  <p class="career-label">사용 기술</p>
+                  <ul class="career-list career-tech">
+                    <li>Java</li>
+                    <li>Spring Boot</li>
+                    <li>JPA</li>
+                    <li>MSSQL</li>
+                    <li>OpenShift</li>
+                    <li>Jenkins</li>
+                    <li>GitLab</li>
+                    <li>Grafana</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr class="career-divider" />
+
+        <section class="career-company">
+          <div class="career-company-header">
+            <h2>컬리</h2>
+            <p class="career-period">2022.03 — 2022.11</p>
+          </div>
+
+          <div class="career-team">
+            <div class="career-row">
+              <div class="career-row-meta">
+                <h3>산학협력프로젝트 · 백엔드 개발 및 팀 리딩</h3>
+              </div>
+              <div class="career-row-content">
+                <p class="career-desc">
+                  사내 계정 관리 시스템(Keycloak 기반 SSO)의 백엔드 개발을
+                  담당하며 팀을 리딩.
+                </p>
+                <p class="career-label">역할</p>
+                <ul class="career-list">
+                  <li>백엔드 개발 및 팀 리딩</li>
+                </ul>
+                <p class="career-label">업무</p>
+                <ul class="career-list">
+                  <li>
+                    Keycloak 및 React 기반 사내 계정 관리 시스템 백엔드 개발 및
+                    팀 리딩
+                  </li>
+                  <li>권한 신청/승인/반려 시스템 구현</li>
+                  <li>
+                    역할 기반 접근 제어(RBAC) 및 사용자 행위 로깅 기능 개발
+                  </li>
+                </ul>
+                <p class="career-label">사용 기술</p>
+                <ul class="career-list career-tech">
+                  <li>Java</li>
+                  <li>Spring Boot</li>
+                  <li>Keycloak</li>
+                  <li>React</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 박지예. References on request</p>
+      </div>
+    </footer>
+  </body>
+</html>
