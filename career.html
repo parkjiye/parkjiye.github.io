@@ -76,7 +76,7 @@
                       분리)
                     </li>
                     <li>
-                      통신사 할인 정보를 Redis에 저장 -> 저장된 정보를 바탕으로
+                      통신사 할인 정보를 Redis에 저장 → 저장된 정보를 바탕으로
                       통신사 승인 시 사용
                     </li>
                     <li>통신사 승인과 주결제 승인 프로세스 통합</li>
@@ -115,10 +115,6 @@
                 <div class="career-row-content">
                   <p class="career-label">업무</p>
                   <ul class="career-list">
-                    <li>
-                      Spring Scheduler 기반 고객 시나리오별 앱푸시 자동 발송
-                      프로세스 구축 (배치 발송 + 행동 기반 발송 구조 설계)
-                    </li>
                     <li>레거시 소셜 로그인 시스템 API 업그레이드 및 고도화</li>
                     <li>
                       카카오 톡학생증 API 연동 설계·개발, 이후
@@ -135,6 +131,58 @@
                     <li>Jenkins</li>
                     <li>GitLab</li>
                     <li>Grafana</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="career-project">
+              <div class="career-row">
+                <div class="career-row-meta">
+                  <h4>고객 시나리오별 앱푸시 자동 발송</h4>
+                  <p class="career-period">2026.04 — 2026.06</p>
+                </div>
+                <div class="career-row-content">
+                  <p class="career-label">배경</p>
+                  <p class="career-desc">
+                    기존 앱푸시는 운영자가 매번 대상 고객을 직접 추려 솔루션
+                    콘솔에서 수동 발송하는 방식이었음. 특정 조건(쿠폰 만료 임박,
+                    입장 등)을 충족한 고객에게 자동 발송하는 자동화·설정 기반
+                    프로세스는 없어 이를 신규로 설계·구축.
+                  </p>
+                  <p class="career-label">설계 판단</p>
+                  <p class="career-desc">
+                    시나리오마다 개별 배치를 등록하는 일반적인 접근 대신, 발송
+                    조건·활성화 여부·문구·랜딩 링크를 TASK 테이블로 관리하는
+                    설정 기반 구조를 채택. 새 시나리오가 늘어도 코드 변경 없이
+                    확장 가능하도록 함.
+                  </p>
+                  <p class="career-label">구현</p>
+                  <p class="career-desc">
+                    고객 행동 기반(Spring AOP 이벤트 발행)과 스케줄 기반(Spring
+                    Scheduler) 두 경로가 공통 Task 판단을 거쳐 발송되도록 구성.
+                  </p>
+                  <p class="career-label">안정성</p>
+                  <p class="career-desc">
+                    발송 로직을 AOP 이벤트로 분리해 기존 결제·입장 로직에 영향이
+                    없도록 했고, Scheduler에 shedlock을 적용해 다중 인스턴스
+                    환경에서의 중복 발송을 방지.
+                  </p>
+                  <p class="career-label">결과</p>
+                  <p class="career-desc">
+                    운영자 수동 발송 → 조건 충족 시 자동 발송으로 전환. 신규
+                    시나리오 추가 시 배치 개발·배포 없이 테이블 설정만으로
+                    처리하고, 마케팅 부서가 개발 요청 없이 발송
+                    활성화·시간·문구·링크를 직접 제어. [운영 중 시나리오 N개 /
+                    누적 발송 N건 — 수치 확인 후 기입]
+                  </p>
+                  <p class="career-label">사용 기술</p>
+                  <ul class="career-list career-tech">
+                    <li>Java</li>
+                    <li>Spring Boot</li>
+                    <li>Spring AOP</li>
+                    <li>Spring Scheduler(shedlock)</li>
+                    <li>MSSQL</li>
                   </ul>
                 </div>
               </div>
